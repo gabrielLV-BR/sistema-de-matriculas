@@ -18,12 +18,12 @@
     
     <div>
         <%= form.label "Tipo" %>
-        <%= form.select :kind, enum_to_translated_select(School::kinds, preffix: "enum.kind") %>
+        <%= form.select :kind, enum_to_translated_select(School.kinds, preffix: "enum.kind") %>
     </div>
 
     <div>
         <%= form.label "Regime" %>
-        <%= form.select :regimen, enum_to_translated_select(School::regimen, preffix: "enum.regimen") %>
+        <%= form.select :regimen, enum_to_translated_select(School.regimen, preffix: "enum.regimen") %>
     </div>
 
     <%= form.submit "Cadastrar" %>

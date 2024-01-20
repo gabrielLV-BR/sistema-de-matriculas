@@ -4,9 +4,8 @@ module ApplicationHelper
     preffix << "." if not preffix.end_with? "."
 
     return hash
-      .map { |k, v| [k.to_s, v] }
       .map {
-        |k, v| [I18n.t(preffix + k, default: k), k]
+        |k, v| [I18n.t(preffix + k.to_s, default: k.to_s), k]
       }.to_h
   end
 end

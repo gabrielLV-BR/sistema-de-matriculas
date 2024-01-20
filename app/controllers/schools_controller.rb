@@ -1,6 +1,11 @@
 class SchoolsController < ApplicationController
   def index
     @schools = School.all
+    @schools.each do |s|
+      puts "PRINTING SCHOOL YAYYYY"
+      puts s.attributes
+      puts "\n\n"
+    end
   end
 
   def show
@@ -24,6 +29,6 @@ class SchoolsController < ApplicationController
   private
 
   def school_params
-    params.require(:school).permit(:name, :address, :telephone, :type, :regimen)
+    params.require(:school).permit(:name, :address, :telephone, :kind, :regimen)
   end
 end
