@@ -1,28 +1,30 @@
 <h1>Cadastre uma escola</h1>
 
 <%= form_with model: @school do |form| %>
-
     <div>
-        <%= form.label :name %>
+        <%= form.label :name, "Nome" %>
         <%= form.text_field :name %>
     </div>
 
     <div>
-        <%= form.label :address %>
+        <%= form.label :address, "Endereço" %>
         <%= form.text_field :address %>
     </div>
 
     <div>
-        <%= form.label :telephone %>
+        <%= form.label :telephone, "Telefone" %>
         <%= form.text_field :telephone %>
     </div>
-
     
     <div>
-        <%= form.label :type %>
+        <%= form.label "Tipo" %>
+        <%= form.select :type, School::types %>
     </div>
 
     <div>
-        <%= form.label :type %>
+        <%= form.label "Regime" %>
+        <%= form.select :regimen, School::regimen %>
     </div>
+
+    <%= form.submit "Cadastrar" %>
 <% end %>
