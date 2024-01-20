@@ -11,6 +11,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <%= render "/components/sidebar" %>
+      
+      <div class="content">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>

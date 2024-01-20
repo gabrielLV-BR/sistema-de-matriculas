@@ -1,0 +1,10 @@
+<h1>Escolas cadastradas</h1>
+
+<ul>
+    <% if @schools.empty? then %>
+        <h1>Nenhuma escola cadastrada.</h1>
+        <%= link_to "Cadastre", new_school_url %>
+    <% else %>
+        <%= render @schools %>
+    <% end %>
+</ul>

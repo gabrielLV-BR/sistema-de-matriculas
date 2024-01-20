@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, button, form[type=submit] {
+    cursor: pointer;
+}
+
+ main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+main.content {
+    width: 100%;
+    flex: 1;
+}
+ 
