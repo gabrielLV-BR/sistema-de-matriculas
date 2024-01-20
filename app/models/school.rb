@@ -1,6 +1,6 @@
 class School < ApplicationRecord
   has_many :classrooms
 
-  enum type: %i(kinder elementary high), _suffix: :school
-  enum regimen: %i(city state federal private), _suffix: :school
+  enum kind: { kinder: 0, elementary: 1, high: 2}, _suffix: :school
+  enum regimen: { city: 0, state: 1, federal: 2, private: 3 }, _suffix: :school
 end

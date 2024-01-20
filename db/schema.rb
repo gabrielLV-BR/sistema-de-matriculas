@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_20_171341) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_20_193729) do
   create_table "classrooms", force: :cascade do |t|
     t.string "name"
     t.integer "year"
@@ -25,7 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_20_171341) do
     t.string "name"
     t.string "address"
     t.string "telephone"
-    t.integer "type"
+    t.integer "kind"
     t.integer "regimen"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
