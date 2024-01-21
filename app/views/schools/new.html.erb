@@ -1,31 +1,4 @@
 <h1>Cadastre uma escola</h1>
 <hr>
 
-<%= form_with model: @school, class: "form" do |form| %>
-    <div>
-        <%= form.label :name, "Nome" %>
-        <%= form.text_field :name %>
-    </div>
-
-    <div>
-        <%= form.label :address, "Endereço" %>
-        <%= form.text_field :address %>
-    </div>
-
-    <div>
-        <%= form.label :telephone, "Telefone" %>
-        <%= form.text_field :telephone %>
-    </div>
-    
-    <div>
-        <%= form.label "Tipo" %>
-        <%= form.select :kind, enum_to_translated_select(School.kinds, preffix: "enum.kind") %>
-    </div>
-
-    <div>
-        <%= form.label "Regime" %>
-        <%= form.select :regimen, enum_to_translated_select(School.regimen, preffix: "enum.regimen") %>
-    </div>
-
-    <%= form.submit "Cadastrar", class: "active-button" %>
-<% end %>
+<%= render "form", school: @school, submit_text: "Cadastrar" %>

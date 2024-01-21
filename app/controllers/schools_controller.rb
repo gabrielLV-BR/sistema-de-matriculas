@@ -1,21 +1,20 @@
 class SchoolsController < ApplicationController
+  # GET /
   def index
     @schools = School.all
-    @schools.each do |s|
-      puts "PRINTING SCHOOL YAYYYY"
-      puts s.attributes
-      puts "\n\n"
-    end
   end
 
+  # GET /:id/
   def show
     @school = School.find params[:id]
   end
 
+  # GET /new/
   def new
     @school = School.new
   end
 
+  # POST /
   def create
     @school = School.new school_params
 
@@ -26,6 +25,32 @@ class SchoolsController < ApplicationController
     end
   end
 
+  # GET /:id/edit
+  def edit
+    @school = School.find params[:id]
+  end
+
+  # PUT,PATCH /:id
+  def update
+    @school = School.find params[:id]
+
+    if @school.update school_params
+      redirect_to @school
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  # DELETE /:id
+  def destroy
+    @school = School.find params[:id]
+    @school.delete
+
+    redirect_to schools_url
+  end
+
+  #
+  #
   private
 
   def school_params

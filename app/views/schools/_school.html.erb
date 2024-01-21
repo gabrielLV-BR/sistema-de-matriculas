@@ -10,9 +10,8 @@
     <br>
 
     <footer class="actions">
-        <%= link_to "Editar", edit_school_url(school), class: "button normal" %>
-        <%= link_to "Excluir", edit_school_url(school), class: "button delete" %>
         <%= link_to "Voltar", schools_url, class: "button active" %>
+        <%= link_to "Editar", edit_school_url(school), class: "button normal" %>
+        <%= link_to "Excluir", school, class: "button delete", data: { "turbo-method": "delete" } %>
     </footer>
-
 </div>
