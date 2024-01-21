@@ -1,24 +1,19 @@
-# README
+# Sistema de Matrículas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Um sistema de gerência de matrículas sendo desenvolvido para a prática da linguagem Ruby e do framework Ruby on Rails. (Baseado no meu projeto de TCC homônimo)
 
-Things you may want to cover:
+# Funcionalidades
 
-* Ruby version
+(Em desenvolvimento)
 
-* System dependencies
+- CRUD das escolas;
+- ...
 
-* Configuration
+# Como rodar
 
-* Database creation
+É recomendado ter um ambiente virtual Ruby configurado, porém, apenas as ferramentas base já bastam.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Clonar repositório;
+- Instalar gemas com `bundle install`
+- Rodar migrações com `rake db:migrate`
+- Rodar servidor com `rails server`
