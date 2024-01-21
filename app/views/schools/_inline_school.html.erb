@@ -1,0 +1,11 @@
+<%= link_to school, class: "inline-school" do %>
+    <section class="icon">
+        <%= image_tag "school.svg", draggable: false %>
+    </section>
+    <div class="separator"></div>
+    <section class="data">
+        <p class="name"><%= school.name %></p>
+        <p class="address"><%= school.address %></p>
+        <p class="contact"><%= school.telephone %></p>
+    </section>
+<% end %>

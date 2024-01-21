@@ -1,1 +1,18 @@
-<li><%= @school.name %></li>
+<div class="school">
+    <h1><%= school.name %></h1>
+    <hr>
+    <br>
+
+    <p class="name"><%= school.name %></p>
+    <p class="address"><%= school.address %></p>
+    <p class="contact"><%= school.telephone %></p>
+
+    <br>
+
+    <footer class="actions">
+        <%= link_to "Editar", edit_school_url(school), class: "button normal" %>
+        <%= link_to "Excluir", edit_school_url(school), class: "button delete" %>
+        <%= link_to "Voltar", schools_url, class: "button active" %>
+    </footer>
+
+</div>

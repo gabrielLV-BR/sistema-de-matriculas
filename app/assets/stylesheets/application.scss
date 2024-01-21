@@ -14,6 +14,25 @@
  *= require_self
  */
 
+ :root {
+    // Pallete to be used (double-split complementary)
+    --primary-color: #2DA9F5;
+    --secondary-color: #5038F5;
+
+    --red: #F56E54;
+    --green: #20F5A4;
+    --yellow: #F7DB23;
+
+    --black: #202020;
+    --gray: #454545;
+    --light-gray: #808080;
+    --white: #ffffff;
+ }
+
+body {
+    color: var(--black);
+    background-color: var(--white);
+}
 
 * {
     margin: 0;
@@ -25,7 +44,7 @@ a, button, form[type=submit] {
     cursor: pointer;
 }
 
- main {
+main {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -34,9 +53,3 @@ a, button, form[type=submit] {
     height: 100vh;
     overflow: hidden;
 }
-
-main.content {
-    width: 100%;
-    flex: 1;
-}
- 

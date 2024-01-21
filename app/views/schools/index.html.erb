@@ -1,11 +1,18 @@
-<h1>Escolas cadastradas</h1>
+<%= content_for :head do %>
+    <%= stylesheet_link_tag "partials/school" %>
+<% end %>
 
-<ul>
+<h1>Escolas cadastradas</h1>
+<hr>
+
+<ul class="schools">
     <% if @schools.empty? then %>
-        <h1>Nenhuma escola cadastrada.</h1>
+        <p>Nenhuma escola cadastrada.</p>
     <% else %>
-        <%= render @schools %>
+        <% @schools.each do |school| %>
+            <%= render "inline_school", school: school %>
+        <% end %>
     <% end %>
 </ul>
 
-<%= link_to "Cadastre", new_school_url %>
+<%= link_to "Cadastre", new_school_url, class: "active-button" %>

@@ -1,6 +1,7 @@
 <h1>Cadastre uma escola</h1>
+<hr>
 
-<%= form_with model: @school do |form| %>
+<%= form_with model: @school, class: "form" do |form| %>
     <div>
         <%= form.label :name, "Nome" %>
         <%= form.text_field :name %>
@@ -26,5 +27,5 @@
         <%= form.select :regimen, enum_to_translated_select(School.regimen, preffix: "enum.regimen") %>
     </div>
 
-    <%= form.submit "Cadastrar" %>
+    <%= form.submit "Cadastrar", class: "active-button" %>
 <% end %>

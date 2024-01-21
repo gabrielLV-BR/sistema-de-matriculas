@@ -1,0 +1,52 @@
+ul.schools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.inline-school {
+    // remove <a>'s styling
+    text-decoration: none;
+
+    &:visited {
+        color: initial;
+    }
+
+    border: 0.1rem solid var(--primary-color);
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    border-radius: 0.2rem;
+
+    height: 6rem;
+    overflow: hidden;
+
+    .separator {
+        width: 0.08rem;
+        height: 2em;
+        background: var(--primary-color);
+    }
+
+    .name {
+        text-overflow: ellipsis;
+    }
+
+    .address, .contact {
+        color: var(--light-gray);
+    }
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--primary-color) 20%, transparent 80%);
+    }
+
+    transition: background-color 200ms ease;
+
+}
