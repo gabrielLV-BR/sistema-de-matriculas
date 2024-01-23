@@ -1,27 +1,40 @@
+<%= content_for :head do %>
+    <%= stylesheet_link_tag "partials/errors" %>
+<% end %>
+
 <%= form_with model: school, class: "form" do |form| %>
     <div>
         <%= form.label :name, "Nome" %>
         <%= form.text_field :name %>
+
+        <%= render "components/errors", errors: school.errors.full_messages_for(:name) %>
     </div>
 
     <div>
         <%= form.label :address, "Endereço" %>
         <%= form.text_field :address %>
+
+        <%= render "components/errors", errors: school.errors.full_messages_for(:address) %>
     </div>
 
     <div>
         <%= form.label :telephone, "Telefone" %>
         <%= form.text_field :telephone %>
+
+        <%= render "components/errors", errors: school.errors.full_messages_for(:telephone) %>
     </div>
     
     <div>
         <%= form.label "Tipo" %>
         <%= form.select :kind, enum_to_translated_select(School.kinds, preffix: "enum.kind") %>
+
+        <%= render "components/errors", errors: school.errors.full_messages_for(:kind) %>
     </div>
 
     <div>
         <%= form.label "Regime" %>
         <%= form.select :regimen, enum_to_translated_select(School.regimen, preffix: "enum.regimen") %>
+        <%= render "components/errors", errors: school.errors.full_messages_for(:regimen) %>
     </div>
 
     <%= form.submit submit_text, class: "button active" %>

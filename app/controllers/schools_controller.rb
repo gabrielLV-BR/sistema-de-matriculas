@@ -21,7 +21,7 @@ class SchoolsController < ApplicationController
     if @school.save then
       redirect_to @school
     else
-      redirect_back status: :unprocessable_entity, fallback_location: schools_url
+      render :new, status: :unprocessable_entity
     end
   end
 
