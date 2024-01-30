@@ -1,0 +1,24 @@
+<%= form_with model: [@school, @classroom] do |form| %>
+    <div>
+        <%= form.label :name, "Nome" %>
+        <%= form.text_field :name %>
+
+        <%= render "components/errors", errors: @classroom.errors.full_messages_for(:name) %>
+    </div>
+
+    <div>
+        <%= form.label :year, "Ano" %>
+        <%= form.number_field :year %>
+
+        <%= render "components/errors", errors: @classroom.errors.full_messages_for(:year) %>
+    </div>
+
+    <div>
+        <%= form.label :capacity, "Capacidade" %>
+        <%= form.number_field :capacity %>
+
+        <%= render "components/errors", errors: @classroom.errors.full_messages_for(:capacity) %>
+    </div>
+    
+    <%= form.submit "Criar turma" %>
+<% end %>
