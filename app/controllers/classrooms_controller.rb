@@ -13,7 +13,7 @@ class ClassroomsController < ApplicationController
     @classroom = @school.classrooms.build classroom_params
 
     if @classroom.save then
-      redirect_to @classroom
+      redirect_to @school
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class ClassroomsController < ApplicationController
 
   def update
     if @clasroom.update classroom_params then
-      redirect_to @classroom
+      redirect_to @school
     else
       render :edit, status: :unprocessable_entity
     end
